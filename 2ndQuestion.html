@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Length Calculator</title>
+</head>
+<body>
+    <input type="text" id="textInput" placeholder="Enter your text here">
+    <button onclick="calculateLength()">Calculate Length</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateLength() {
+            var textInput = document.getElementById("textInput").value;
+            var lengthWithoutSpaces = textInput.replace(/\s/g, '').length;
+            document.getElementById("result").textContent = "Length without spaces: " + lengthWithoutSpaces;
+        }
+    </script>
+</body>
+</html>
